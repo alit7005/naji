@@ -262,7 +262,7 @@ function tdcli_update_callback(data)
 					local naji
 					if matches == "مخاطبین" then
 						return tdcli_function({
-							ID = "SearchContacts",
+							ID = "794",
 							query_ = nil,
 							limit_ = 999999999
 						},
@@ -300,15 +300,15 @@ function tdcli_update_callback(data)
 						if redis:scard('botBOT-IDanswerslist') == 0  then text = "<code>       EMPTY</code>" end
 						return send(msg.chat_id_, msg.id_, text)
 					elseif matches == "مسدود" then
-						naji = "botBOT-IDblockedusers"
+						naji = "11"
 					elseif matches == "شخصی" then
-						naji = "botBOT-IDusers"
+						naji = "794"
 					elseif matches == "گروه" then
-						naji = "botBOT-IDgroups"
+						naji = "192"
 					elseif matches == "سوپرگروه" then
-						naji = "botBOT-IDsupergroups"
+						naji = "2187"
 					elseif matches == "لینک" then
-						naji = "botBOT-IDsavedlinks"
+						naji = "9742"
 					elseif matches == "مدیر" then
 						naji = "botBOT-IDadmin"
 					else
